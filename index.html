@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: linear-gradient(54deg, rgb(54, 81, 104), rgb(56, 83, 106), rgb(60, 86, 110));
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.wrapper{
+  display: flex;
+}
+
+
+.wrapper>.mah{
+  color: #fff;
+  font-size: 60px;
+  font-weight: 400;
+}
+
+
+
+.wrapper>.yas{
+  margin-left: 15px;
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+}
+.yas>li{
+  list-style: none;
+  color: rgb(236, 120, 198);
+  font-size: 60px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+    animation: sam 12s steps(4) infinite;
+}
+
+
+
+@keyframes sam {
+  100%{
+    top: -370px;
+  }
+}
+
+
+.yas>li>span{
+  position: relative;
+  margin: 5px 0;
+  line-height: 90px;
+}
+.yas>li>span::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-left: 2px solid rgb(236, 120, 198);
+  animation: sar 3s steps(10) infinite;
+  background-image: linear-gradient(54deg, rgb(54, 81, 104), rgb(56, 83, 106), rgb(60, 86, 110));
+}
+
+
+@keyframes sar {
+  40%, 60%{
+    left: calc(100% + 30px);
+  }
+  100%{
+    left: 0;
+  }
+}
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="mah">I'm a</div>
+    <ul class="yas">
+      <li><span>Yasaman</span></li>
+      <li><span>Designer</span></li>
+      <li><span>Developer</span></li>
+      <li><span>YouTuber</span></li>
+    </ul>
+  </div>
+</body>
+</html>
